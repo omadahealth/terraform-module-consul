@@ -61,7 +61,7 @@ resource "aws_instance" "consul" {
 
     # House-keeping
     tags {
-        Name        = "consul-n${count.index}"
+        Name        = "consul-n${count.index + 1}"
         Environment = "${var.environment}"
         Contact     = "${var.contact}"
         Purpose     = "Consul Service Discovery and KV server"
