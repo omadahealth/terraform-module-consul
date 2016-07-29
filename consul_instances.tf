@@ -73,5 +73,5 @@ output "consul_private_ips" {
 }
 
 output "consul_instance_ids" {
-    value = "${join(",", aws_instance.consul.id)}"
+    value = "${join(",", aws_instance.consul.*.id)}"
 }
